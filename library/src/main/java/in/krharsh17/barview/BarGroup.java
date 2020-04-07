@@ -348,7 +348,8 @@ class BarGroup extends ConstraintLayout implements Constants {
     }
 
     /**
-     * Initializer function for the value tooltip
+     * Initializer function for the value tooltip. By default the corner radius of tooltips is zero
+     * and if user specifies a value for corner radius then the changes ar applied in the tooltips.
      *
      */
     void setupValue() {
@@ -379,8 +380,8 @@ class BarGroup extends ConstraintLayout implements Constants {
                 cornersRadius, // rx
                 cornersRadius, // ry
                 paint // Paint
-        );
-        Drawable d = new BitmapDrawable(getResources(), bitmap);
+        ); // method to draw rectangular tooltip with specified corner radius
+        Drawable d = new BitmapDrawable(getResources(), bitmap); // conversion of bitmap into drawable
         value.setBackground(d);
         value.setRotation(90);
         value.setGravity(Gravity.CENTER);

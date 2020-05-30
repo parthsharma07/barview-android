@@ -355,8 +355,6 @@ public class BarView extends ScrollView implements Constants {
         this.valueTooltipCornerRadius = valueTooltipCornerRadius;
     }
 
-    public int getAnimationType(){ return animationType; }
-
     public void setAnimationType(int animationType){
 
         this.animationType = animationType;
